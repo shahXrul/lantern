@@ -30,50 +30,18 @@ Kept [8] files on [31] found files
 +------------+--------+----------+----------------+------------+
 | TYPESCRIPT | eslint | .ts      | 8              | yes        |
 +------------+--------+----------+----------------+------------+
-
-[31m❌ Linted [TYPESCRIPT] files with [eslint]: Found 7 error(s) - (1.46s)[0m
 ::endgroup::
 ::group::[32m✅ Linted [TYPESCRIPT] files with [eslint] successfully - (1.85s)[0m (expand for details)
 - Using [eslint v8.28.0] https://megalinter.io/latest/descriptors/typescript_eslint
 - MegaLinter key: [TYPESCRIPT_ES]
 - Rules config: [/github/workspace/.eslintrc.json]
 - Number of files analyzed: [8]
---Error detail:
-
-/tmp/lint/lanternUi/src/app/app.component.ts
-  13:11  warning  'mine' is assigned a value but never used  @typescript-eslint/no-unused-vars
-  14:11  warning  'them' is assigned a value but never used  @typescript-eslint/no-unused-vars
-  16:11  warning  'ours' is assigned a value but never used  @typescript-eslint/no-unused-vars
-  17:11  warning  'they' is assigned a value but never used  @typescript-eslint/no-unused-vars
-  18:11  warning  'b' is assigned a value but never used     @typescript-eslint/no-unused-vars
-  19:5   error    Unexpected console statement               no-console
-
-/tmp/lint/lanternUi/src/main.ts
-  12:17  error  Unexpected console statement  no-console
-
-✖ 7 problems (2 errors, 5 warnings)
-
-
-
 ::endgroup::
 
 +----SUMMARY----+--------+---------------+-------+-------+--------+--------------+
 | Descriptor    | Linter | Mode          | Files | Fixed | Errors | Elapsed time |
 +---------------+--------+---------------+-------+-------+--------+--------------+
-| ❌ TYPESCRIPT | eslint | list_of_files |     8 |     1 |      7 |        1.46s |
-+---------------+--------+---------------+-------+-------+--------+--------------+
-
-[34mYou could have same capabilities but better runtime performances if you use a MegaLinter flavor:[0m
-- [javascript] oxsecurity/megalinter/flavors/javascript@v6 (55 linters) https://megalinter.io/latest/flavors/javascript/
-- [cupcake] oxsecurity/megalinter/flavors/cupcake@v6 (79 linters) https://megalinter.io/latest/flavors/cupcake/
-
-[Updated Sources Reporter] copied 7 fixed source files in folder /tmp/lint/megalinter-reports/updated_sources.
 | ✅ TYPESCRIPT | eslint | list_of_files |     8 |     1 |      0 |        1.85s |
 +---------------+--------+---------------+-------+-------+--------+--------------+
 
 [GitHub Comment Reporter] Posted summary as comment on shahXrul/lantern #PR1
-[Updated Sources Reporter] copied 3 fixed source files in folder /github/workspace/megalinter-reports/updated_sources.
-Download it from artifacts then copy-paste it in your local repo to apply linters updates
-[31m❌ Error(s) have been found during linting[0m
-To disable linters or customize their checks, you can use a .mega-linter.yml file at the root of your repository
-More info at https://megalinter.io/latest/configuration/
