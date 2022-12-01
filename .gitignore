@@ -4,3 +4,6 @@ megalinter-reports/*
 megalinter-reports/updated_sources/megalinter-reports/megalinter.log
 megalinter-reports/linters_logs/ERROR-TYPESCRIPT_ES.log
 megalinter-reports/megalinter.log
+lanternApi/bin/
+lanternApi/obj/
+lanternApi/.vs/
