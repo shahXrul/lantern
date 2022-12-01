@@ -8,21 +8,3 @@ INSTRUCTIONS
 
 IDE EXTENSIONS APPLICABLE TO YOUR PROJECT
 
-eslint (TYPESCRIPT)
-  - atom:
-    - linter-eslint: https://atom.io/packages/linter-eslint
-  - brackets:
-    - brackets-eslint: https://github.com/brackets-userland/brackets-eslint
-  - eclipse:
-    - Tern-Linter-ESLint: https://github.com/angelozerr/tern.java/wiki/Tern-Linter-ESLint
-  - emacs:
-    - flycheck: http://www.flycheck.org/en/latest/languages.html#javascript
-  - idea:
-    - ESLint Plugin: https://plugins.jetbrains.com/plugin/7494-eslint
-  - sublime:
-    - SublimeLinter-eslint: https://github.com/roadhump/SublimeLinter-eslint
-  - vim:
-    - ale: https://github.com/w0rp/ale
-    - Syntastic: https://github.com/vim-syntastic/syntastic/tree/master/syntax_checkers/javascript
-  - vscode:
-    - vscode-eslint: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
