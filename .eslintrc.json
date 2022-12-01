@@ -8,5 +8,10 @@
       "eslint:recommended",
       "plugin:@typescript-eslint/eslint-recommended",
       "plugin:@typescript-eslint/recommended"
-    ]
+    ],
+    "rules":{
+        "quotes":["warn","single"],
+        "no-console": 1,
+        "complexity": ["error", 2]
+    }
   }
