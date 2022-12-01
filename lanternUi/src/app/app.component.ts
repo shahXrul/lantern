@@ -10,8 +10,8 @@ export class AppComponent {
 
   test() {
     const a = 1;
-    const mine = "abc";
-    const them = '321'
+    const mine = "abc123";
+    const them = "321"
 
     const ours = 'edc12345';
     const they = '123'
