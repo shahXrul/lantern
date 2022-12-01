@@ -10,7 +10,7 @@ export class AppComponent {
 
   test() {
     const a = 1;
-    const mine = 'abc123';
+    const mine = "abc123";
     const them = '321'
 
     const ours = 'edc12345';
@@ -26,6 +26,9 @@ export class AppComponent {
       return x + 5;
     }
     else if (x == 3) {
+      return x + 1;
+    }
+    else if (x == 5) {
       return x + 1;
     }
     return x;
