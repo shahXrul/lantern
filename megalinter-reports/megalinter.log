@@ -63,6 +63,4 @@ Kept [8] files on [32] found files
 
 [Updated Sources Reporter] copied 8 fixed source files in folder /tmp/lint/megalinter-reports/updated_sources.
 Download it from artifacts then copy-paste it in your local repo to apply linters updates
-[31m❌ Error(s) have been found during linting[0m
-To disable linters or customize their checks, you can use a .mega-linter.yml file at the root of your repository
-More info at https://megalinter.io/latest/configuration/
+[32m✅ Successfully linted all files without errors[0m
