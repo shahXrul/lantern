@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\sshahul1\source\lantern\lanternApi\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\sshahul1\source\lantern\lanternApi\.editorconfig" />
+  </ItemGroup>
+
 </Project>
