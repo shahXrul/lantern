@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'lanternUi';
 
   test() {
-    let a = 1;
+    const a = 1;
     console.log(a);
   }
 }
