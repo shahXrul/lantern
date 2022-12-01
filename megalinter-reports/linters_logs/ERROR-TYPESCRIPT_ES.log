@@ -6,16 +6,17 @@ See documentation on https://megalinter.io/latest/descriptors/typescript_eslint/
 Linter raw log:
 
 /tmp/lint/lanternUi/src/app/app.component.ts
-  13:11  warning  'mine' is assigned a value but never used  @typescript-eslint/no-unused-vars
-  14:11  warning  'them' is assigned a value but never used  @typescript-eslint/no-unused-vars
-  16:11  warning  'ours' is assigned a value but never used  @typescript-eslint/no-unused-vars
-  17:11  warning  'they' is assigned a value but never used  @typescript-eslint/no-unused-vars
-  18:11  warning  'b' is assigned a value but never used     @typescript-eslint/no-unused-vars
-  19:5   error    Unexpected console statement               no-console
+  13:11  warning  'mine' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  14:11  warning  'them' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  16:11  warning  'ours' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  17:11  warning  'they' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  18:11  warning  'b' is assigned a value but never used                  @typescript-eslint/no-unused-vars
+  19:5   warning  Unexpected console statement                            no-console
+  23:4   error    Method 'a' has a complexity of 3. Maximum allowed is 2  complexity
 
 /tmp/lint/lanternUi/src/main.ts
-  12:17  error  Unexpected console statement  no-console
+  12:17  warning  Unexpected console statement  no-console
 
-✖ 7 problems (2 errors, 5 warnings)
+✖ 8 problems (1 error, 7 warnings)
 
 
