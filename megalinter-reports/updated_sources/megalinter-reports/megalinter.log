@@ -10,8 +10,8 @@ The MegaLinter documentation can be found at:
 ----------------------------------------------------------------------------------------------------
 ::group::MegaLinter initialization (expand for details)
 GITHUB_REPOSITORY: shahXrul/lantern
-GITHUB_REF: refs/pull/7/merge
-GITHUB_RUN_ID: 3590853246
+GITHUB_REF: refs/pull/9/merge
+GITHUB_RUN_ID: 3590880845
 
 
 MARKDOWN_REMARK_LINT has been temporary disabled in MegaLinter, please use a previous MegaLinter version or wait for the next one !
@@ -31,7 +31,7 @@ Kept [8] files on [32] found files
 | TYPESCRIPT | eslint | .ts      | 8              | yes        |
 +------------+--------+----------+----------------+------------+
 ::endgroup::
-::group::[32m✅ Linted [TYPESCRIPT] files with [eslint] successfully - (2.13s)[0m (expand for details)
+::group::[32m✅ Linted [TYPESCRIPT] files with [eslint] successfully - (2.02s)[0m (expand for details)
 - Using [eslint v8.28.0] https://megalinter.io/latest/descriptors/typescript_eslint
 - MegaLinter key: [TYPESCRIPT_ES]
 - Rules config: [/github/workspace/.eslintrc.json]
@@ -41,7 +41,7 @@ Kept [8] files on [32] found files
 +----SUMMARY----+--------+---------------+-------+-------+--------+--------------+
 | Descriptor    | Linter | Mode          | Files | Fixed | Errors | Elapsed time |
 +---------------+--------+---------------+-------+-------+--------+--------------+
-| ✅ TYPESCRIPT | eslint | list_of_files |     8 |     1 |      0 |        2.13s |
+| ✅ TYPESCRIPT | eslint | list_of_files |     8 |     1 |      0 |        2.02s |
 +---------------+--------+---------------+-------+-------+--------+--------------+
 
-[GitHub Comment Reporter] Posted summary as comment on shahXrul/lantern #PR7
+[GitHub Comment Reporter] Posted summary as comment on shahXrul/lantern #PR9
