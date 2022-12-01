@@ -28,9 +28,6 @@ export class AppComponent {
     else if (x == 3) {
       return x + 1;
     }
-    else if (x == 5) {
-      return x + 1;
-    }
     return x;
   }
 
