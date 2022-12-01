@@ -25,8 +25,6 @@ export class AppComponent {
       return x + 5;
     } else if (x == 3) {
       return x + 1;
-    } else {
-      return 4; // 3rd path
     }
   }
 
