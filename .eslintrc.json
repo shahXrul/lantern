@@ -11,6 +11,6 @@
     ],
     "rules":{
         "quotes":["warn","single"],
-        "no-console": 2
+        "no-console": 1
     }
   }

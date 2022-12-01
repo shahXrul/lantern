@@ -10,10 +10,10 @@ export class AppComponent {
 
   test() {
     const a = 1;
-    const mine = 'abc';
+    const mine = "abc";
     const them = '321'
 
-    const ours = 'edc123';
+    const ours = 'edc1234';
     const they = '123'
     const b = `abc1234${a}`;
     console.log(a);
