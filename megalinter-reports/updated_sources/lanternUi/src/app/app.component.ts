@@ -13,7 +13,7 @@ export class AppComponent {
     const mine = 'abc';
     const them = '321'
 
-    const ours = 'edc';
+    const ours = 'edc1234';
     const they = '123'
     const b = `abc1234${a}`;
     console.log(a);

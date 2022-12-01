@@ -10,7 +10,7 @@ export class AppComponent {
 
   test() {
     const a = 1;
-    const mine = "abc";
+    const mine = 'abc';
     const them = '321'
 
     const ours = 'edc1234';
