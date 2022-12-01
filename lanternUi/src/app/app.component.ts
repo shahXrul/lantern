@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lanternUi';
+
+  test() {
+    let a = 1;
+  }
 }
