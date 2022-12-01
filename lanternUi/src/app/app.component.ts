@@ -17,15 +17,18 @@ export class AppComponent {
     const they = '123'
     const b = `abc1234${a}`;
     console.log(a);
+    this.numbercheck(1);
   }
 
 
-  a(x: number) {
+  numbercheck(x: number) {
     if (x == 2) {
       return x + 5;
-    } else if (x == 3) {
+    }
+    else if (x == 3) {
       return x + 1;
     }
+    return x;
   }
 
 

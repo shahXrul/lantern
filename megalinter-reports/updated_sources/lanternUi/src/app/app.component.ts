@@ -10,24 +10,28 @@ export class AppComponent {
 
   test() {
     const a = 1;
-    const mine = 'abc';
+    const mine = "abc";
     const them = '321'
 
-    const ours = 'edc1234';
+    const ours = 'edc12345';
     const they = '123'
     const b = `abc1234${a}`;
     console.log(a);
+    this.numbercheck(1);
   }
 
 
-  a(x: number) {
+  numbercheck(x: number) {
     if (x == 2) {
       return x + 5;
-    } else if (x == 3) {
-      return x + 1;
-    } else {
-      return 4; // 3rd path
     }
+    else if (x == 3) {
+      return x + 1;
+    }
+    else if (x == 6) {
+      return x + 6;
+    }
+    return x;
   }
 
 
