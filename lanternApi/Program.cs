@@ -1,17 +1,21 @@
-// See https://aka.ms/new-console-template for more information
+// <copyright file="Program.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 Console.WriteLine("Hello, World!");
 camelCasing();
 PascalCasing();
+pichuonetwo();
 
 int camelCasing()
 {
-    const int Pokemonjhoto = 1;
-    var pikachu = 2;
+    int pokemonjhoto;
+    int pikachu;
     var a = 1;
     if (a == 1)
     {
-        pikachu = 10;
     }
+
     return a;
 }
 
@@ -25,4 +29,3 @@ int pichuonetwo()
 {
     return 1;
 }
-
