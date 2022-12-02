@@ -11,13 +11,15 @@ export class AppComponent {
 
   test() {
     const a = 1;
-    const mine = 'abc123';
+    const mine = "abc123";
     const them = '321'
 
     const ours = 'edc12345';
     const they = '123'
     const b = `abc1234${a}`;
     console.log(a);
+    console.log("abc");
+
     this.numbercheck(1);
   }
 
