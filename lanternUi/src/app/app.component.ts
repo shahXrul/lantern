@@ -18,6 +18,8 @@ export class AppComponent {
     const they = '123'
     const b = `abc1234${a}`;
     console.log(a);
+    console.log('abc');
+
     this.numbercheck(1);
   }
 
