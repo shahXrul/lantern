@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { mydemo } from './Employee';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,12 +15,14 @@ export class AppComponent {
     const them = '321'
 
     const ours = 'edc12345';
-    const they = '123'
+    let they = "123";
     const b = `abc1234${a}`;
     console.log(a);
     console.log('abc');
 
     this.numbercheck(1);
+
+    mydemo();
   }
 
 
