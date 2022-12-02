@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = "lanternUi12334123123123";
+  title = 'lanternUi12334123123123';
 
   test() {
     const a = 1;
