@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = "lanternUi12334";
+  title = "lanternUi12334123123";
 
   test() {
     const a = 1;
