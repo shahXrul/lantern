@@ -8,7 +8,7 @@ import { mydemo } from './Employee';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = "lanternUi12334123123123";
+  title = 'lanternUi12334123123123';
 
   test() {
     const a = 1;
