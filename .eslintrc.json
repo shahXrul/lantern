@@ -12,6 +12,7 @@
   "rules":{
       "quotes":["error","single"],
       "no-console": 1,
-      "complexity": ["error", 3]
+      "complexity": ["error", 3],
+      "class-methods-use-this": [0]
   }
 }
