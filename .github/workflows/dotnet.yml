@@ -17,8 +17,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      Solution_Name: "lanternAPI/lanternApi.sln"
-      Test_Project_Path: "lantern.tests/lantern.tests.csproj"
+      Solution_Name: "../lanternAPI/lanternApi.sln"
+      Test_Project_Path: "../lantern.tests/lantern.tests.csproj"
 
     steps:
     - uses: actions/checkout@v3
@@ -41,10 +41,3 @@ jobs:
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
       env:
         Configuration: ${{ matrix.configuration }}
-
-    # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: MSIX Package
-        path: ${{ env.Wap_Project_Directory }}\AppPackages
