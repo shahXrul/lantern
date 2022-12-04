@@ -10,15 +10,44 @@ on:
     branches: [ "main" ]
 
 jobs:
+  analysis:
+
+      runs-on: ubuntu-latest
+      permissions:
+        contents: write
+        pull-requests: write
+
+      steps:
+      - uses: actions/checkout@v3
+
+      - name: 'Print manual run reason'
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          echo 'Reason: ${{ github.event.inputs.reason }}'
+
+      - name: .NET code metrics
+        id: dotnet-code-metrics
+        uses: dotnet/samples/github-actions/DotNet.GitHubAction@main
+        env:
+          GREETINGS: 'Hello, .NET developers!' # ${{ secrets.GITHUB_TOKEN }}
+        with:
+          owner: ${{ github.repository_owner }}
+          name: ${{ github.repository }}
+          branch: ${{ github.ref }}
+          dir: ${{ './github-actions/DotNet.GitHubAction' }}
+        
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v4
+        if: ${{ steps.dotnet-code-metrics.outputs.updated-metrics }} == 'true'
+        with:
+          title: '${{ steps.dotnet-code-metrics.outputs.summary-title }}'
+          body: '${{ steps.dotnet-code-metrics.outputs.summary-details }}'
+          commit-message: '<Project Name>-<Sprint-Details> - Information'
   build:
     strategy:
       matrix:
         configuration: [Debug, Release]
     runs-on: ubuntu-latest
-
-    env:
-      Solution_Name: "../lanternAPI/lanternApi.sln"
-      Test_Project_Path: "../lantern.tests/lantern.tests.csproj"
 
     steps:
     - uses: actions/checkout@v3
@@ -29,9 +58,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build "lanternAPI/lanternApi.sln" --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test "lantern.tests/lantern.tests.csproj" --no-build --verbosity normal
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action/composite@v2
       if: always()
