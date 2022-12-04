@@ -8,11 +8,11 @@ import { mydemo } from './Employee';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = "lanternUi12334123123123";
+  title = 'lanternUi12334123123123';
 
   test() {
     const a = 1;
-    let mine = "abc123";
+    const mine = 'abc123';
     const them = '321';
 
     const ours = 'edc12345';

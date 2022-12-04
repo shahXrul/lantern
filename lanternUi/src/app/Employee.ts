@@ -12,7 +12,7 @@ export class Employee {
 export function mydemo() {
   // logic will go here ..
 
-  let a = "asd";
-  var abc = 'qwe';
+  const a = 'asd';
+  const abc = 'qwe';
   console.log('this is exportable function in TypeScript. !!');
 }
