@@ -18,6 +18,8 @@
       "max-len": ["warn", { "code": 120 }],
       "import/no-unresolved": "off",
       "import/extensions": "off",
-      "import/prefer-default-export": "off"
+      "import/prefer-default-export": "off",
+      "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
+
   }
 }
