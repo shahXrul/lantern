@@ -6,12 +6,16 @@ name: .NET Builld and Unit Test
 on:
   push:
     branches: [ "main", "dev-prateek" ]
+    paths:
+    - 'lantern/lanternApi/**'
   pull_request:
     branches: [ "main" ]
+    paths:
+    - 'lantern/lanternApi/**'
+    
 
 jobs:
   analysis:
-
       runs-on: ubuntu-latest
       permissions:
         contents: write
@@ -58,9 +62,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build "lanternAPI/lanternApi.sln" --no-restore
+      run: dotnet build "lantern/lanternApi/lanternApi.sln" --no-restore
     - name: Test
-      run: dotnet test "lantern.tests/lantern.tests.csproj" --no-build --verbosity normal
+      run: dotnet test "lantern/lantern.tests/lantern.tests.csproj" --no-build --verbosity normal
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action/composite@v2
       if: always()
