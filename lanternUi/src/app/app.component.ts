@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'lanternUi12334123123123';
 
   test() {
-    const a = 1;
+    const a = 2;
     const mine = 'abc123';
     const them = '321';
 
