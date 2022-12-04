@@ -1,29 +1,29 @@
 {
-    "root": true,
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "@typescript-eslint"
-    ],
-    "extends": [
-      "airbnb-base",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:import/typescript"
-    ],
-    "rules":{
-        "quotes":["error","single"],
-        "no-console": 1,
-        "complexity": ["error", 3],
-        "import/prefer-default-export": "off",
-        "max-len": ["warn", { "code": 120 }],
-        "import/no-unresolved": [2, { "caseSensitive": false }  ],
-        "import/extensions": [
-          0,
-          "ignorePackages",
-          {
-            "ts": "never"
-          }
-       ],
-       "class-methods-use-this": [0]
-    }
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript"
+  ],
+  "rules":{
+      "quotes":["error","single"],
+      "no-console": 1,
+      "complexity": ["error", 3],
+      "import/prefer-default-export": "off",
+      "max-len": ["warn", { "code": 120 }],
+      "import/no-unresolved": [2, { "caseSensitive": false }  ],
+      "import/extensions": [
+        0,
+        "ignorePackages",
+        {
+          "ts": "never"
+        }
+     ],
+     "class-methods-use-this": [0]
   }
+}
