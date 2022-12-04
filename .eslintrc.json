@@ -15,6 +15,16 @@
       "complexity": ["error", 3],
       "class-methods-use-this": [0],
       "max-len": ["warn", { "code": 120 }],
-      "import/no-unresolved": "off"
+      "import/no-unresolved": "off",
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+     ]
   }
 }
