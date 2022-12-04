@@ -6,3 +6,9 @@ lanternApi/bin/
 lanternApi/obj/
 lanternApi/.vs/
 megalinter-reports
+lantern.api/bin/
+lantern.api/obj/
+lantern.api/.vs/
+lantern.tests/bin/
+lantern.tests/obj/
+lantern.tests/.vs/

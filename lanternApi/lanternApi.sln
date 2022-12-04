@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lanternApi", "lanternApi.csproj", "{AD7D1F20-61D9-4982-9B75-F58105170620}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lantern.api", "lantern.api.csproj", "{AD7D1F20-61D9-4982-9B75-F58105170620}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lantern.tests", "..\lantern.tests\lantern.tests.csproj", "{55C9454C-619C-49B9-8D68-4F0F75E615C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{AD7D1F20-61D9-4982-9B75-F58105170620}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD7D1F20-61D9-4982-9B75-F58105170620}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD7D1F20-61D9-4982-9B75-F58105170620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C9454C-619C-49B9-8D68-4F0F75E615C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55C9454C-619C-49B9-8D68-4F0F75E615C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C9454C-619C-49B9-8D68-4F0F75E615C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55C9454C-619C-49B9-8D68-4F0F75E615C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
