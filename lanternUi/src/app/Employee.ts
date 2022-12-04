@@ -1,21 +1,18 @@
 export class Employee {
-    empCode: number;
-    empName: string;
+  empCode: number;
 
-    constructor(code: number, name: string) {
-        this.empName = name;
-        this.empCode = code;
-    }
+  empName: string;
 
-
-    public getSalary(): number {
-        return 10000;
-    }
+  constructor(code: number, name: string) {
+    this.empName = name;
+    this.empCode = code;
+  }
 }
 
 export function mydemo() {
-    // logic will go here ..
-    let a = 'asd';
-    var abc = 'qwe';
-    console.log('this is exportable function in TypeScript. !!')
+  // logic will go here ..
+
+  let a = "asd";
+  var abc = 'qwe';
+  console.log('this is exportable function in TypeScript. !!');
 }
