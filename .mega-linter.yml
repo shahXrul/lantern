@@ -1,6 +1,6 @@
 
 FILTER_REGEX_EXCLUDE: .*.spec.ts
-# APPLY_FIXES: all
+APPLY_FIXES: all
 # APPLY_FIXES_EVENT: pull_request
 # APPLY_FIXES_MODE: pull_request
 ENABLE_LINTERS:
