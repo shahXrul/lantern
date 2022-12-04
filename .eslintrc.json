@@ -13,6 +13,8 @@
       "quotes":["error","single"],
       "no-console": 1,
       "complexity": ["error", 3],
-      "class-methods-use-this": [0]
+      "class-methods-use-this": [0],
+      "max-len": ["warn", { "code": 120 }],
+      "import/no-unresolved": "off"
   }
 }
