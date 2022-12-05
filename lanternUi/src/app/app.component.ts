@@ -10,6 +10,8 @@ import { mydemo } from './Employee';
 export class AppComponent {
   title = 'lanternUi12334123123123';
 
+  shipname = 'red';
+
   testVarialbe() {
     const usedVariable = 42;
     const Notusedvariable = 42;
@@ -67,6 +69,7 @@ export class AppComponent {
     }
 
     if (name === 'test') {
+      this.shipname = '';
       return false;
     }
 
@@ -75,5 +78,21 @@ export class AppComponent {
 
   getName() {
     return 'abc';
+  }
+
+  unusedvar() {
+    const someunusedvar = 42;
+
+    // Write-only variables are not considered as used.
+    let y = 10;
+    y = 5;
+
+    // A read for a modification of itself is not considered as used.
+    let z = 0;
+    z += 1;
+  }
+
+  getX(x: number, y: number) {
+    return x;
   }
 }
