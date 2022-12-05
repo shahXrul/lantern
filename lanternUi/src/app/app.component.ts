@@ -8,31 +8,91 @@ import { mydemo } from './Employee';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = "lanternUi12334123123123";
+  title = 'lanternUi12334123123123';
 
-  test() {
-    const a = 2;
-    const mine = 'abc123';
-    const them = '321';
+  shipname = 'red';
 
-    const ours = 'edc12345';
-    const they = '123';
-    const b = `abc1234${a}`;
-    console.log(a);
-    console.log('abc');
-
-    this.numbercheck(1);
-
-    mydemo();
+  testVarialbe() {
+    const usedVariable = 42;
+    const Notusedvariable = 42;
   }
 
   numbercheck(x: number) {
+    const inputValue = '4';
+
+    // bad
+    const val = Number(inputValue);
+
     if (x === 2) {
       return x + 5;
     }
     if (x === 3) {
       return x + 1;
     }
+    return x;
+  }
+
+  IteratorsandGenerators() {
+    const numbers = [1, 2, 3, 4, 5];
+
+    // bad
+    // const increasedByOne = [];
+    // for (let i = 0; i < numbers.length; i++) {
+    //   increasedByOne.push(numbers[i] + 1);
+    // }
+    // good
+    const increasedByOne: number[] = [];
+    numbers.forEach((num) => {
+      increasedByOne.push(num + 1);
+    });
+    console.log(increasedByOne);
+  }
+
+  Properties() {
+    const luke = {
+      jedi: true,
+      age: 28,
+    };
+
+    // bad
+    // const isSith = luke['jedi'];
+
+    // good
+    const isJedi = luke.jedi;
+  }
+
+  checkName(hasName: string) {
+    const name = this.getName();
+
+    if (hasName === 'test') {
+      return false;
+    }
+
+    if (name === 'test') {
+      this.shipname = '';
+      return false;
+    }
+
+    return name;
+  }
+
+  getName() {
+    return 'abc';
+  }
+
+  unusedvar() {
+    const someunusedvar = 42;
+
+    // Write-only variables are not considered as used.
+    let y = 10;
+    y = 5;
+
+    // A read for a modification of itself is not considered as used.
+    let z = 0;
+    z += 1;
+  }
+
+  getX(x: number, y: number) {
     return x;
   }
 }
