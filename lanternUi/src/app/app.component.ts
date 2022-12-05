@@ -95,4 +95,70 @@ export class AppComponent {
   getX(x: number, y: number) {
     return x;
   }
+
+  foo() {
+    const x = 1;
+    const y = 2;
+    if (x) {
+      return x;
+    }
+    return y;
+  }
+
+  // no-dupe-else-if
+  // foo2(n: number) {
+  //   if (n === 1) {
+  //     this.foo();
+  //   } else if (n === 2) {
+  //     this.bar();
+  //   } else if (n === 3) {
+  //     this.baz();
+  //   } else if (n === 2) {
+  //     this.quux();
+  //   } else if (n === 5) {
+  //     this.quuux();
+  //   }
+  // }
+
+  foo3(n: number) {
+    if (n === 1) {
+      this.foo();
+    } else if (n === 2) {
+      this.bar();
+    } else if (n === 3) {
+      this.baz();
+    } else if (n === 4) {
+      this.quux();
+    } else if (n === 5) {
+      this.quuux();
+    }
+  }
+
+  quux() {
+    console.log('Method not implemented.');
+  }
+
+  baz() {
+    console.log('Method not implemented.');
+  }
+
+  bar() {
+    console.log('Method not implemented.');
+  }
+
+  quuux() {
+    console.log('Method not implemented.');
+  }
+
+  unaryincrements(isValid: boolean) {
+    const foo = 'superLongLongLongLongLongLongLongLongString';
+    let num = 1;
+    // FIXME: shouldn’t use a global here
+    // num++;
+    num += 1;
+
+    // TODO: total should be configurable by an options param
+    console.log('remove this');
+    return num;
+  }
 }

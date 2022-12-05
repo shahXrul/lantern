@@ -11,15 +11,22 @@
     "plugin:import/typescript"
   ],
   "rules":{
-      "quotes":["error","single"],
+      "quotes":["warn","single"],
       "no-console": 1,
-      "complexity": ["error", 3],
+      "complexity": ["error", 10],
       "class-methods-use-this": [0],
       "max-len": ["warn", { "code": 120 }],
       "import/no-unresolved": "off",
       "import/extensions": "off",
       "import/prefer-default-export": "off",
-      "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
+      "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+      "no-warning-comments": [
+        "error",
+        {
+          "terms": ["fixme"],
+          "location": "start"
+        }
+      ]
 
   }
 }
