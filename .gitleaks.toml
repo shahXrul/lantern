@@ -14,5 +14,18 @@ useDefault = true
     '''node_modules''',
     '''.mypy_cache''',
     '''(.*?)gitleaks\.toml$''',
+    '''(.*?)package-lock.json$''',
     '''(.*?)(png|jpg|gif|doc|docx|pdf|bin|xls|pyc|zip)$''',
     '''(go.mod|go.sum)$''']
+
+[[rules]]
+description = "Password"
+id = "password"
+regex = '''(?i)(.*password.*|.*pwd.*|.*passwd.*|.*magicword.*)'''
+secretGroup = 1
+keywords = [
+    "password",
+    "pwd",
+    "passwd",
+    "magicword"
+]
