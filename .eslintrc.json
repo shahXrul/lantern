@@ -3,6 +3,7 @@
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint"
+    // "spellcheck"
   ],
   "extends": [
     "airbnb-base",
@@ -19,14 +20,40 @@
       "import/no-unresolved": "off",
       "import/extensions": "off",
       "import/prefer-default-export": "off",
-      "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+      "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
       "no-warning-comments": [
-        "error",
+        "warn",
         {
           "terms": ["fixme"],
           "location": "start"
         }
-      ]
+      ],
+      "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
 
+      // ,"spellcheck/spell-checker": [2,
+      // {
+      //     "comments": false,
+      //     "strings": true,
+      //     "identifiers": false,
+      //     "templates": false,
+      //     "lang": "en_US",
+      //     "skipWords": [
+      //         "dict",
+      //         "aff",
+      //         "hunspellchecker",
+      //         "hunspell",
+      //         "utils"
+      //     ],
+      //     "skipIfMatch": [
+      //         "http://[^s]*",
+      //         ".\/*",
+      //         "^[-\\w]+\/[-\\w\\.]+$"
+      //     ],
+      //     "skipWordIfMatch": [
+      //         "^foobar.*$"
+      //     ],
+      //     "minLength": 3
+      //  }
+      // ]
   }
 }
