@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lanternUi12334123123123';
-  shipname = 'red';
+  shipname = 'red123';
 
   numbercheck(x: number) {
     // bad
