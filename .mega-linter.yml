@@ -1,8 +1,11 @@
 
-FILTER_REGEX_EXCLUDE: .*.spec.ts
+FILTER_REGEX_EXCLUDE: (.*.spec.ts|test.ts)
 APPLY_FIXES: all
 # APPLY_FIXES_EVENT: pull_request
 # APPLY_FIXES_MODE: pull_request
 ENABLE_LINTERS:
   - TYPESCRIPT_ES
   - CSHARP_DOTNET_FORMAT
+  - REPOSITORY_GITLEAKS
+# TYPESCRIPT_ES_PRE_COMMANDS:
+#   - command: npm install eslint-plugin-spellcheck 

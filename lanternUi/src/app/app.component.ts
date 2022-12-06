@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { mydemo } from './Employee';
 
 // npm install eslint-config-airbnb —-save-dev
 @Component({
@@ -9,20 +8,10 @@ import { mydemo } from './Employee';
 })
 export class AppComponent {
   title = 'lanternUi12334123123123';
-
   shipname = 'red';
 
-  testVarialbe() {
-    const usedVariable = 42;
-    const Notusedvariable = 42;
-  }
-
   numbercheck(x: number) {
-    const inputValue = '4';
-
     // bad
-    const val = Number(inputValue);
-
     if (x === 2) {
       return x + 5;
     }
@@ -34,18 +23,16 @@ export class AppComponent {
 
   IteratorsandGenerators() {
     const numbers = [1, 2, 3, 4, 5];
-
     // bad
-    // const increasedByOne = [];
-    // for (let i = 0; i < numbers.length; i++) {
-    //   increasedByOne.push(numbers[i] + 1);
+    let sum = 0;
+    // for (const num of numbers) {
+    //   sum += num;
     // }
     // good
-    const increasedByOne: number[] = [];
     numbers.forEach((num) => {
-      increasedByOne.push(num + 1);
+      sum += num;
     });
-    console.log(increasedByOne);
+    console.log(sum);
   }
 
   Properties() {
@@ -59,6 +46,7 @@ export class AppComponent {
 
     // good
     const isJedi = luke.jedi;
+    console.log(isJedi);
   }
 
   checkName(hasName: string) {
@@ -77,22 +65,56 @@ export class AppComponent {
   }
 
   getName() {
-    return 'abc';
+    return 'a word';
   }
 
-  unusedvar() {
-    const someunusedvar = 42;
+  blank() {
 
-    // Write-only variables are not considered as used.
-    let y = 10;
-    y = 5;
-
-    // A read for a modification of itself is not considered as used.
-    let z = 0;
-    z += 1;
   }
 
   getX(x: number, y: number) {
-    return x;
+    return x + y;
+  }
+
+  // no-dupe-else-if
+  // foo2(n: number) {
+  //   if (n === 1) {
+  //     this.foo();
+  //   } else if (n === 2) {
+  //     this.bar();
+  //   } else if (n === 3) {
+  //     this.baz();
+  //   } else if (n === 2) {
+  //     this.quux();
+  //   } else if (n === 5) {
+  //     this.quuux();
+  //   }
+  // }
+
+  quux() {
+    console.log('Method not implemented.');
+  }
+
+  baz() {
+    console.log('Method not implemented.');
+  }
+
+  bar() {
+    console.log('Method not implemented.');
+  }
+
+  quuux() {
+    console.log('Method not implemented.');
+  }
+
+  unaryincrements(isValid: boolean) {
+    let num = 1;
+    // FIXME: this should be fixed
+    // num++;
+    num += 1;
+
+    // TODO: total should be configurable by an options param
+    console.log('remove this', isValid);
+    return num;
   }
 }
