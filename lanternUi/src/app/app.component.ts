@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'lanternUi12334123123123';
 
   shipname = 'red123';
-  password = "pokeball"
+
   numbercheck(x: number) {
     // bad
     if (x === 2) {
