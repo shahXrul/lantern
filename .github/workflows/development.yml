@@ -1,12 +1,15 @@
-name: Echo Message
+name: Echo Hello
 on:
   push:
-    branches:
-      - develop
-
+    branches: [develop]
 jobs:
   echo-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo a Message
-        run: echo "Hello, world!"
+      - name: Echo Hello
+        run: echo "Hello"
+        id: hello
+      - name: Trigger Reusable Workflow
+        uses: ./.github/workflows/echo-message.yml
+        with:
+          message: ${{ steps.hello.outputs.message }}
