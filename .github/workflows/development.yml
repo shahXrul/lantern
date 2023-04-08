@@ -6,6 +6,8 @@ jobs:
   build-test-API:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
     - name: Build and test API
       uses: shahXrul/lantern/.github/workflows/build.yml@develop
       with:
