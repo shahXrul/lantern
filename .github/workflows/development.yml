@@ -6,9 +6,13 @@ jobs:
   echo-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Echo Hello
         run: echo "Hello"
         id: hello
+        
       - name: Trigger Reusable Workflow
         uses: ./.github/workflows/build.yml
         with:
