@@ -14,6 +14,6 @@ jobs:
         id: hello
         
       - name: Trigger Reusable Workflow
-        uses: ./.github/workflows/build.yml
+        uses: [my repo]/.github/workflows/build.yml
         with:
           message: ${{ steps.hello.outputs.message }}
