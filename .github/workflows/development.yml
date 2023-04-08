@@ -11,6 +11,6 @@ on:
 
 jobs:
   call-workflow-A:
-    uses: shahXrul/lantern/.github/workflows/build.yml@develop
+    uses: .github/workflows/build.yml@develop
     with:
       username: Houssem
