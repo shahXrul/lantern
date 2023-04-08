@@ -1,10 +1,9 @@
 name: Echo Hello
-on:
-  push:
-    branches: [develop]
-jobs:
-  build-test-API:
-  - name: Trigger Reusable Workflow
-    uses: ./.github/workflows/build.yml
-    with:
-      message: apiBuild
+  on:
+    push:
+      branches: [develop]
+  jobs:
+    build-test-API:
+      uses: ./.github/workflows/build.yml
+      with:
+        message: apiBuild
