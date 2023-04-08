@@ -1,16 +1,15 @@
-name: Echo Message
+name: 080-resusable-workflow-called
+
 on:
   workflow_call:
     inputs:
-      message:
-        description: 'The message to echo'
+      username:
         required: true
+        type: string
+
 jobs:
-  echo-job2:
+  example_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Echo Message
-        run: echo ${{ inputs.message }}
+      - name: Run a hello world script
+        run: echo Hello, ${{ inputs.username }}
