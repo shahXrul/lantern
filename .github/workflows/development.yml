@@ -3,17 +3,8 @@ on:
   push:
     branches: [develop]
 jobs:
-  echo-job1:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Echo Hello
-        run: echo "Hello"
-        id: hello
-        
-      - name: Trigger Reusable Workflow
-        uses: shahXrul/lantern/.github/workflows/build.yml@develop
-        with:
-          message: ${{ steps.hello.outputs.message }}
+  build-test-API:
+  - name: Trigger Reusable Workflow
+    uses: ./.github/workflows/build.yml
+    with:
+      message: apiBuild
