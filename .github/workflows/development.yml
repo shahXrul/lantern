@@ -3,7 +3,7 @@ on:
   push:
     branches: [develop]
 jobs:
-  echo-job:
+  echo-job1:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

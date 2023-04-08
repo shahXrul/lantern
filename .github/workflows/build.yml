@@ -6,7 +6,7 @@ on:
         description: 'The message to echo'
         required: true
 jobs:
-  echo-job:
+  echo-job2:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
