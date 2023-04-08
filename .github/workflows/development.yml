@@ -1,9 +1,14 @@
-name: Echo Hello
+name: Main Build Workflow
+
 on:
   push:
-    branches: [develop]
+    branches:
+      - develop
+
 jobs:
-  build-test-API:
-      uses: shahXrul/lantern/.github/workflows/build.yml@develop
-      with:
-        message: apiBuild
+  release:
+    uses: shahXrul/lantern/.github/workflows/build.yml@develop
+    with:
+      runs-on: "ubuntu-latest"
+      node-version: "14.x"
+    secrets: inherit
