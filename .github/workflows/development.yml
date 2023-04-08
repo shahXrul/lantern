@@ -1,9 +1,14 @@
 name: Echo Hello
-  on:
-    push:
-      branches: [develop]
-  jobs:
-    build-test-API:
+on:
+  push:
+    branches: [develop]
+jobs:
+  build-test-API:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Build and test API
       uses: ./.github/workflows/build.yml
       with:
         message: apiBuild
