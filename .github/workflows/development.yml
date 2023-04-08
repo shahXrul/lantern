@@ -1,0 +1,12 @@
+name: Echo Message
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  echo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo a Message
+        run: echo "Hello, world!"
