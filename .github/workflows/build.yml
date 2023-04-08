@@ -7,5 +7,8 @@ jobs:
   echo-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Echo Message
         run: echo ${{ inputs.message }}
