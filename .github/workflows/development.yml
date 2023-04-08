@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Build and test API
-      uses: ./.github/workflows/build.yml
+      uses: lantern/.github/workflows/build.yml@develop
       with:
         message: apiBuild
