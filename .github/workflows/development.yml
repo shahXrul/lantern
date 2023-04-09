@@ -4,10 +4,6 @@ on:
     branches:
       - develop
 jobs:
-  call-workflow-A:
-    uses: shahXrul/lantern/.github/workflows/build.yml@develop
-    with:
-      username: Houssem
   echo-job1:
     runs-on: ubuntu-latest
     steps:
@@ -16,3 +12,7 @@ jobs:
       - name: Echo Hello
         run: echo "Hello"
         id: hello
+  call-workflow-A:
+    uses: shahXrul/lantern/.github/workflows/build.yml@develop
+    with:
+      username: Houssem
