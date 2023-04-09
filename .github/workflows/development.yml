@@ -13,9 +13,8 @@ jobs:
       - name: Echo Hello
         run: echo "Hello"
         id: hello
-  release:
+  call-workflow-A:
+    uses: .github/workflows/build.yml@develop
     uses: shahXrul/lantern/.github/workflows/build.yml@develop
     with:
-      runs-on: "ubuntu-latest"
-      node-version: "14.x"
-    secrets: inherit  
+      username: Houssem
