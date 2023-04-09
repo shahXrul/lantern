@@ -1,15 +1,21 @@
-name: 080-resusable-workflow-caller
-
+name: Main Build Workflow
 on:
   push:
-    branches: develop # [ main ]
-  pull_request:
-    branches: develop # [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
-
+    branches:
+      - develop
 jobs:
-  call-workflow-A:
+  echo-job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Echo Hello
+        run: echo "Hello"
+        id: hello
+  release:
     uses: shahXrul/lantern/.github/workflows/build.yml@develop
     with:
-      username: Houssem
+      runs-on: "ubuntu-latest"
+      node-version: "14.x"
+    secrets: inherit  
