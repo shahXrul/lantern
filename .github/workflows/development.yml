@@ -17,6 +17,7 @@ jobs:
     with:
       username: Houssem
   call-workflow-B:
+    needs: call-workflow-A
     uses: shahXrul/lantern/.github/workflows/build.yml@develop
     with:
       username: Houssem2
