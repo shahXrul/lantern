@@ -4,19 +4,19 @@ on:
     branches:
       - develop
 jobs:
-  job1:
+  echo-job1:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Echo Hello
-        run: echo "Hello from Job 1"
-        id: hello_job1
-  job2:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Echo Hello
-        run: echo "Hello from Job 2"
-        id: hello_job2
+        run: echo "Hello"
+        id: hello
+  call-workflow-A:
+    uses: shahXrul/lantern/.github/workflows/build.yml@develop
+    with:
+      username: Houssem
+  call-workflow-B:
+    uses: shahXrul/lantern/.github/workflows/build.yml@develop
+    with:
+      username: Houssem2
