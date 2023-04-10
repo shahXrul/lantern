@@ -17,7 +17,6 @@ jobs:
   call-workflow-release:
     environment:
       name: Main
-      needs: call-workflow-A
     uses: shahXrul/lantern/.github/workflows/build.yml@develop
     with:
       username: Houssem2
