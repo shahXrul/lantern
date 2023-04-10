@@ -3,6 +3,14 @@ on:
   push:
     branches:
       - develop
+on:
+  workflow_dispatch:
+    branches:
+      - develop
+  push:
+    branches:
+      - develop
+
 jobs:
   echo-job1:
     runs-on: ubuntu-latest
