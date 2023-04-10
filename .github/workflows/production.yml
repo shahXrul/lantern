@@ -1,0 +1,23 @@
+name: Main Build Workflow manueal
+on:
+  workflow_dispatch:
+    branches:
+      - main
+
+jobs:
+  echo-job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Echo Hello
+        run: echo "Hello from main"
+        id: hello
+  call-workflow-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Echo Hello
+        run: echo "Hello from main 2"
+        id: hello2
