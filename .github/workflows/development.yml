@@ -1,9 +1,5 @@
 name: Main Build Workflow
 on:
-  push:
-    branches:
-      - develop
-on:
   workflow_dispatch:
     branches:
       - develop
