@@ -1,25 +1,16 @@
-name: Main Build Workflow
+name: Manual trigger
 
 on:
   workflow_dispatch:
-  push:
-    branches: ["develop"]
+    inputs:
+      name:
+        description: "Who to greet"
+        default: "World"
 
 jobs:
-  echo-job1:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Echo Hello
-        run: echo "Hello"
-        id: hello
-  call-workflow-A:
-    uses: shahXrul/lantern/.github/workflows/build.yml@develop
-    with:
-      username: Houssem
-  call-workflow-B:
-    needs: call-workflow-A
-    uses: shahXrul/lantern/.github/workflows/build.yml@develop
-    with:
-      username: Houssem2
+    hello:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Hello Step
+            run: echo "Hello ${{ github.event.inputs.name }}"
