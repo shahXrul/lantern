@@ -16,7 +16,11 @@ jobs:
         id: hello
   call-workflow-release:
     environment:
-      name: Main
-    uses: shahXrul/lantern/.github/workflows/build.yml@develop
-    with:
-      username: Houssem2
+        name: Main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Echo Hello
+        run: echo "Hello from main 2"
+        id: hello2
