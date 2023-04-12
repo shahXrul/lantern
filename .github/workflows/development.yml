@@ -28,11 +28,9 @@ jobs:
           cd lanternUi
           echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
 
-      - name: Update version badge
-        run: sed -i 's/versiontoupdate/1.2.3/g' versions.svg
-   
       - name: Update version
         run: |
+          sed -i 's/versiontoupdate/1.2.3/g' versions.svg
           cd lanternUi
           npm version patch -m "chore: bump version to %s"
           git config --global user.name "github-action[bot]"
