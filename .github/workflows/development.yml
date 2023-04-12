@@ -26,7 +26,7 @@ jobs:
         id: version
         run: |
           cd lanternUi
-          echo "::set-output name=app_version::$(jq -r '.version' package.json)"
+          echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
 
       - name: Update version
         run: |
