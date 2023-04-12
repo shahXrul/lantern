@@ -18,7 +18,7 @@ jobs:
       - name: Build it
         run: |
           cd lanternUi
-          ng build
+          npm run build
 
       - name: Update version
         run: |
