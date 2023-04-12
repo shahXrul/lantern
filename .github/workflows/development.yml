@@ -23,7 +23,6 @@ jobs:
           npm run build
 
       - name: Update version
-        GITHUB_TOKEN: ${{secrets.PAT}}
         run: |
           cd lanternUi
           npm version patch -m "chore: bump version to %s"
