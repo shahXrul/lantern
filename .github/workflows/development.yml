@@ -29,7 +29,7 @@ jobs:
           echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
 
       - name: Update version badge
-        run: sed -i "s/<text.*>.*<\/text>/<text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"16px\">$${{  steps.version.outputs.GITHUB_OUTPUT }}<\/text>/g" version.svg
+        run: sed -i "s/<text.*>.*<\/text>/<text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"16px\">$${{  steps.version.outputs.app_version }}<\/text>/g" version.svg
    
       - name: Update version
         run: |
