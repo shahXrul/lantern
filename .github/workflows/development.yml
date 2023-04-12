@@ -31,8 +31,10 @@ jobs:
           echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
           npm version patch -m "chore: bump version to %s"
           echo "{app_version_new}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
+          echo "secret-number=pokemon" >> "$GITHUB_OUTPUT"
           echo "the secret number is ${{ steps.step-update-version.outputs.app_version_new }}"
           echo "the secret number is ${{ steps.step-update-version.outputs.app_version }}"
+          echo "the secret number is ${{ steps.sets-a-secret.outputs.secret-number }}"
           sed -i 's/${steps.step-update-version.outputs.app_version}/$(steps.step-update-version.outputs.app_version_new)/g' versions.svg
           git add versions.svg
           git add .
