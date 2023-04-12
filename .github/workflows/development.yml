@@ -32,7 +32,7 @@ jobs:
         run: |
           git config --global user.name "github-action[bot]"
           git config --global user.email "github-action[bot]@users.noreply.github.com"
-          sed -i 's/${{  steps.version.outputs.SELECTED_COLOR }}/1.2.3/g' ./versions.svg
+          sed -i 's/$${steps.version.outputs.app_version}/1.2.3/g' ./versions.svg
           git add versions.svg
           cd lanternUi
           npm version patch -m "chore: bump version to %s"
