@@ -26,8 +26,8 @@ jobs:
         run: |
           cd lanternUi
           npm version patch -m "chore: bump version to %s"
-          # git config --global user.name "github-action[bot]"
-          # git config --global user.email "github-action[bot]@users.noreply.github.com"
+          git config --global user.name "github-action[bot]"
+          git config --global user.email "github-action[bot]@users.noreply.github.com"
           git add .
           git commit -m 'increment version'
           git push
