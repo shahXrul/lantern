@@ -27,13 +27,17 @@ jobs:
         run: |
           echo "secret-number='pokemon'" >> "$GITHUB_OUTPUT"
 
-      - name: Update version
-        id: step-update-version
+      - id: step-update-version
+        name: Update version
+        run: |
+          echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
+
+      - name: Update badge
         run: |
           git config --global user.name "github-action[bot]"
           git config --global user.email "github-action[bot]@users.noreply.github.com"
           cd lanternUi
-          echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
+          # echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
           npm version patch -m "chore: bump version to %s"
           echo "{app_version_new}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
           echo "the secret number is ${{ steps.step-update-version.outputs.app_version_new }}"
