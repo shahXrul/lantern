@@ -22,17 +22,12 @@ jobs:
           export NODE_OPTIONS=--openssl-legacy-provider
           npm run build
 
-      - name: Get app version
-        id: version
-        run: |
-          cd lanternUi
-          echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
-
       - name: Update version
         run: |
           git config --global user.name "github-action[bot]"
           git config --global user.email "github-action[bot]@users.noreply.github.com"
           cd lanternUi
+          echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
           npm version patch -m "chore: bump version to %s"
           echo "{app_version_new}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
           echo $${steps.version.outputs.app_version}
