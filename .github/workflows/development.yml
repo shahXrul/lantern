@@ -30,6 +30,7 @@ jobs:
       - id: step-update-version
         name: Update version
         run: |
+          cd lanternUi
           echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
 
       - name: Update badge
