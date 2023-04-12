@@ -18,4 +18,10 @@ jobs:
       - name: Build it
         run: |
           cd lanternUi
-          npm build
+          ng build
+
+      - name: Update version
+        run: |
+          cd lanternUi
+          npm version patch -m "chore: bump version to %s"
+          git push --follow-tags
