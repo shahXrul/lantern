@@ -25,7 +25,7 @@ jobs:
       - name: Get app version
         id: version
         run: |
-          cd cd lanternUi
+          cd lanternUi
           echo "::set-output name=app_version::$(jq -r '.version' package.json)"
 
       - name: Update version
