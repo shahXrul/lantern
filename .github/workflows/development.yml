@@ -25,4 +25,4 @@ jobs:
         run: |
           cd lanternUi
           npm version patch -m "chore: bump version to %s"
-          git push --follow-tags
+          git push
