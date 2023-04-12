@@ -25,6 +25,6 @@ jobs:
         run: |
           cd lanternUi
           npm version patch -m "chore: bump version to %s"
-          git add.
+          git add .
           git commit -m 'increment version'
           git push
