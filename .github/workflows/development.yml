@@ -33,9 +33,10 @@ jobs:
           git config --global user.name "github-action[bot]"
           git config --global user.email "github-action[bot]@users.noreply.github.com"
           cd lanternUi
-          echo "{app_version_new}={$(npm version patch -m) }" >> $GITHUB_OUTPUT
-          echo steps.version.outputs.app_version_new
-          #npm version patch -m "chore: bump version to %s"
+          npm version patch -m "chore: bump version to %s"
+          echo "{app_version_new}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
+          echo $${steps.version.outputs.app_version}
+          echo $${steps.version.outputs.app_version_new}
           sed -i 's/$${steps.version.outputs.app_version}/$$(steps.version.outputs.app_version_new)/g' versions.svg
           git add versions.svg
           git add .
