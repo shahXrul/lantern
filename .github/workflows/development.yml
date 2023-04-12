@@ -25,7 +25,6 @@ jobs:
       - name: Update version
         run: |
           cd lanternUi
-          output=$(echo "hello")
           npm version patch -m "chore: bump version to %s"
           git config --global user.name "github-action[bot]"
           git config --global user.email "github-action[bot]@users.noreply.github.com"
