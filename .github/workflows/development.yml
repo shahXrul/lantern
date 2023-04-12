@@ -26,8 +26,11 @@ jobs:
         id: version
         run: |
           cd lanternUi
-          echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
+          echo "{app_version}={$(jq -r '.version' package.json)}" >> $ANGULAR_VERSION
 
+      - name: Update version badge
+        run: sed -i "s/<text.*>.*<\/text>/<text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"16px\">$${{  steps.version.outputs.ANGULAR_VERSION }}<\/text>/g" version.svg
+   
       - name: Update version
         run: |
           cd lanternUi
