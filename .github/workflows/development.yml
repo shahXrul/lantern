@@ -22,6 +22,12 @@ jobs:
           export NODE_OPTIONS=--openssl-legacy-provider
           npm run build
 
+      - name: Get app version
+        id: version
+        run: |
+          cd cd lanternUi
+          echo "::set-output name=app_version::$(jq -r '.version' package.json)"
+
       - name: Update version
         run: |
           cd lanternUi
