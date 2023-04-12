@@ -11,7 +11,11 @@ jobs:
         uses: actions/checkout@v3
       
       - name: Install dependecies
-        run:  npm install
+        run: |
+          cd lanternUi
+          npm install
 
       - name: Build it
-        run: npm build
+        run: |
+          cd lanternUi
+          npm build
