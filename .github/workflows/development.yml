@@ -35,8 +35,8 @@ jobs:
           cd lanternUi
           echo "{app_version_new}={$(npm version patch -m "chore: bump version to %s"}" >> $GITHUB_OUTPUT
           #npm version patch -m "chore: bump version to %s"
-          sed -i 's/$${steps.version.outputs.app_version}/$$(steps.version.outputs.app_version_new)/g' ../../versions.svg
-          git add ../../versions.svg
+          sed -i 's/$${steps.version.outputs.app_version}/$$(steps.version.outputs.app_version_new)/g' versions.svg
+          git add versions.svg
           git add .
           git commit -m 'increment version'
           git push
