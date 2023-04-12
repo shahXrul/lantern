@@ -18,6 +18,7 @@ jobs:
       - name: Build it
         run: |
           cd lanternUi
+          export NODE_OPTIONS=--openssl-legacy-provider
           npm run build
 
       - name: Update version
