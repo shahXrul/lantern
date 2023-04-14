@@ -31,7 +31,7 @@ jobs:
         name: Update version
         run: |
           cd lanternUi
-          echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
+          echo "{app_version}={$(Get-Content -Raw package.json | ConvertFrom-Json | Select-Object -ExpandProperty version)}" >> $GITHUB_OUTPUT
 
       - name: Update badge
         run: |
