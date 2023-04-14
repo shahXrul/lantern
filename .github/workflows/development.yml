@@ -19,7 +19,7 @@ jobs:
       - name: Build it
         run: |
           cd lanternUi
-          export NODE_OPTIONS=--openssl-legacy-provider
+          set NODE_OPTIONS=--openssl-legacy-provider
           npm run build
 
       - id: sets-a-secret
