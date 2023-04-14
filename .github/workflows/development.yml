@@ -29,7 +29,6 @@ jobs:
 
       - id: step-update-version
         name: Update version
-        shell: bash
         run: |
           cd lanternUi
           $version = Get-Content -Raw package.json | ConvertFrom-Json | Select-Object -ExpandProperty version
