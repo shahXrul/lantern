@@ -33,7 +33,7 @@ jobs:
           cd lanternUi
           $version = Get-Content -Raw package.json | ConvertFrom-Json | Select-Object -ExpandProperty version
           echo $version
-          echo "app_version=$version" >> $GITHUB_OUTPUT
+          echo "app_version=(echo $version)" >> $GITHUB_OUTPUT
           echo "the secret number is ${{ steps.step-update-version.outputs.app_version }}"
 
 
