@@ -25,10 +25,10 @@ jobs:
       - id: sets-a-secret
         name: Generate, mask, and output a secret
         run: |
-          "SELECTED_COLOR=green" >> $env:GITHUB_OUTPUT
-          Write-Output "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
-          echo "${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
-          echo "secret-number='pokemon'" >> "$GITHUB_OUTPUT"
+          the_secret=$((RANDOM))
+          echo "::add-mask::$the_secret"
+          echo "secret-number=$the_secret" >> "$GITHUB_OUTPUT"
+          echo "the secret number is ${{ steps.sets-a-secret.outputs.secret-number }}"
 
       - id: step-update-version
         name: Update version
