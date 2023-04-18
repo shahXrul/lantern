@@ -27,6 +27,7 @@ jobs:
         run: |
           cd lanternUi
           $version = Get-Content -Raw package.json | ConvertFrom-Json | Select-Object -ExpandProperty version
+          echo "hello"
           echo $version
           echo "app_version={123}" >> $GITHUB_OUTPUT
           echo "the secret number is ${{ steps.step-update-version.outputs.app_version }}"
@@ -34,6 +35,8 @@ jobs:
 
       - name: Update badge
         run: |
+          echo "hello"
+          echo $version
           git config --global user.name "github-action[bot]"
           git config --global user.email "github-action[bot]@users.noreply.github.com"
           cd lanternUi
