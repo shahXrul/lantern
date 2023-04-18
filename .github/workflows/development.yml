@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      
+                
       - name: Install dependecies
         run: |
           cd lanternUi
@@ -21,14 +21,6 @@ jobs:
           cd lanternUi
           $env:NODE_OPTIONS = "--openssl-legacy-provider"
           npm run build
-
-      - id: sets-a-secret
-        name: Generate, mask, and output a secret
-        run: |
-          the_secret=$((RANDOM))
-          echo "::add-mask::$the_secret"
-          echo "secret-number=$the_secret" >> "$GITHUB_OUTPUT"
-          echo "the secret number is ${{ steps.sets-a-secret.outputs.secret-number }}"
 
       - id: step-update-version
         name: Update version
