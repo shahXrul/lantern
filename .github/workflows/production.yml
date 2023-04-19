@@ -1,6 +1,6 @@
 name: Main Build Workflow manueal
 on:
-  workflow_dispatch:
+  push:
     branches:
       - main
 
