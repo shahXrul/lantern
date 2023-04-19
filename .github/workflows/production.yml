@@ -1,9 +1,10 @@
-name: Main Build Workflow manueal
+name: Main Build Workflow manual
 on:
   push:
     branches:
       - main
-
+  workflow_dispatch:
+  
 jobs:
   echo-job1:
     runs-on: ubuntu-latest
