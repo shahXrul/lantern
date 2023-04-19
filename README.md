@@ -1,2 +1,9 @@
 # lantern
-[![GitHub Super-Linter](https://github.com/shahXrul/lantern/actions/workflows/mega-linter.yml/badge.svg)](https://github.com/shahXrul/lantern/actions/workflows/mega-linter.yml)
+
+![Version](https://img.shields.io/github/package-json/v/shahXrul/lantern/develop?filename=lanternUi%2Fpackage.json)
+
+[![GitHub Super-Linter](https://github.com/shahXrul/lantern/actions/workflows/development.yml/badge.svg)](https://github.com/shahXrul/lantern/actions/workflows/mega-linter.yml)
+
+
+updated2
+3

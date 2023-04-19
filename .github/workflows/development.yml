@@ -5,19 +5,50 @@ on:
       - develop
 jobs:
   echo-job1:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
+    if: github.actor != 'github-actions[bot]'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Echo Hello
-        run: echo "Hello"
-        id: hello
-  call-workflow-A:
-    uses: shahXrul/lantern/.github/workflows/build.yml@develop
-    with:
-      username: Houssem
-  call-workflow-B:
-    needs: call-workflow-A
-    uses: shahXrul/lantern/.github/workflows/build.yml@develop
-    with:
-      username: Houssem2
+                
+      - name: Install dependecies
+        run: |
+          cd lanternUi
+          npm install
+
+      - name: Build it
+        run: |
+          cd lanternUi
+          $env:NODE_OPTIONS = "--openssl-legacy-provider"
+          npm run build
+
+      - id: step-update-version
+        name: Update version
+        run: |
+          cd lanternUi
+          $version = Get-Content -Raw package.json | ConvertFrom-Json | Select-Object -ExpandProperty version
+          echo "hello"
+          echo $version
+          echo "app_version={123}" >> $GITHUB_OUTPUT
+          echo "the secret number is ${{ steps.step-update-version.outputs.app_version }}"
+
+
+      - name: Update badge
+        run: |
+          echo "hello"
+          echo $version
+          git config --global user.name "github-action[bot]"
+          git config --global user.email "github-action[bot]@users.noreply.github.com"
+          cd lanternUi
+          # echo "{app_version}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
+          npm version patch -m "chore: bump version to %s"
+          $version_new = Get-Content -Raw package.json | ConvertFrom-Json | Select-Object -ExpandProperty version
+          echo "{app_version_new}={$(jq -r '.version' package.json)}" >> $GITHUB_OUTPUT
+          echo "the secret number is ${{ steps.step-update-version.outputs.app_version_new }}"
+          echo "the secret number is ${{ steps.step-update-version.outputs.app_version }}"
+          echo "the secret number is ${{ steps.sets-a-secret.outputs.secret-number }}"
+          sed -i 's/${$version}/$($version_new)/g' versions.svg
+          git add versions.svg
+          git add .
+          git commit -m 'increment version'
+          git push
