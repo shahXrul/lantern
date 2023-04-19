@@ -13,8 +13,10 @@ jobs:
       - name: Echo Hello
         run: echo "Hello from asd"
         id: hello
-  call-workflow-release:
+  deploy-prod:
     runs-on: ubuntu-latest
+    needs: [echo-job1]
+    environment: 'main'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
