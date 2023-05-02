@@ -1,12 +1,15 @@
 name: Main Build Workflow manual
 on:
   pull_request:
+    types:
+      - closed
     branches:
       - main
   
 jobs:
   echo-job1:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
