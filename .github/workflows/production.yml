@@ -9,7 +9,7 @@ on:
 jobs:
   echo-job1:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    # if: github.event.pull_request.merged == true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -19,7 +19,6 @@ jobs:
   deploy-prod:
     runs-on: ubuntu-latest
     needs: [echo-job1]
-    if: github.event.pull_request.merged == true
     environment: 'main'
     steps:
       - name: Checkout repository
