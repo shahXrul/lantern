@@ -1,4 +1,4 @@
-name: Main Build Workflow
+name: dev Build Workflow
 on:
   push:
     branches:
